@@ -19,8 +19,5 @@ If you are developing a production application, we recommend using TypeScript wi
 # Deploy steps
 
 ```bash
-docker build -t cortex-ui:dev .
-kind load docker-image cortex-ui:dev --name cortex
-kubectl apply -k kind-dev-cluster/cortex.yaml
-kubectl rollout restart deployment cortex-ui -n cortex
+deploy-ui.sh
 ```
