@@ -22,5 +22,5 @@ If you are developing a production application, we recommend using TypeScript wi
 docker build -t cortex-ui:dev .
 kind load docker-image cortex-ui:dev --name cortex
 kubectl apply -k kind-dev-cluster/cortex.yaml
-kubectl rollout restart deployment homebrain-ui -n cortex
+kubectl rollout restart deployment cortex-ui -n cortex
 ```
