@@ -76,7 +76,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>HomeBrain</h1>
+        <h1>Cortex</h1>
         <select value={model} onChange={e => setModel(e.target.value)} className="model-select">
           {MODELS.map(m => <option key={m} value={m}>{m}</option>)}
         </select>
@@ -100,7 +100,7 @@ export default function App() {
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Message HomeBrain... (Enter to send, Shift+Enter for newline)"
+          placeholder="Message Cortex... (Enter to send, Shift+Enter for newline)"
           rows={1}
           disabled={streaming}
         />
