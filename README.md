@@ -14,3 +14,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+# Deploy steps
+
+```bash
+docker build -t cortex-ui:dev .
+kind load docker-image cortex-ui:dev --name cortex
+kubectl apply -k kind-dev-cluster/cortex.yaml
+kubectl rollout restart deployment homebrain-ui -n cortex
+```
